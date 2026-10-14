@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-14T15:24:03.0875198+07:00",
+  "title": "Design System: 911 GT3 RS showcase",
+  "extensions": {
+    "colorMeta": {
+      "bg": { "role": "neutral", "displayName": "Graphite Black" },
+      "panel": { "role": "neutral", "displayName": "Raised Graphite" },
+      "white": { "role": "neutral", "displayName": "Silver White" },
+      "muted": { "role": "neutral", "displayName": "Technical Grey" },
+      "red": { "role": "primary", "displayName": "Motorsport Red" },
+      "line": { "role": "neutral", "displayName": "Graphite Rule" },
+      "headline-muted": { "role": "neutral", "displayName": "Headline Grey" },
+      "cta": { "role": "primary", "displayName": "Action Red" },
+      "cta-hover": { "role": "primary", "displayName": "Deep Action Red" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Model Display", "purpose": "Uppercase italic model identity; local Barlow Condensed BlackItalic, exposed as Barlow." },
+      "headline": { "displayName": "Editorial Headline", "purpose": "Uppercase italic section statements." },
+      "numerical": { "displayName": "Performance Numbers", "purpose": "Upright local Barlow Condensed SemiBold with tabular figures." },
+      "body": { "displayName": "Technical Copy", "purpose": "Compact explanatory Manrope text." },
+      "navigation": { "displayName": "Navigation", "purpose": "Upright semibold Manrope control and navigation labels." }
+    },
+    "shadows": [
+      { "name": "hero-type-separation", "value": "drop-shadow(0 5px 18px #0003)", "purpose": "Filter on hero display lettering; surfaces otherwise stay flat." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16,1,.3,1)", "purpose": "Shared editorial easing." },
+      { "name": "title-entry", "value": "1.4s var(--ease) both", "purpose": "Hero title reveal." },
+      { "name": "airflow", "value": "4.5s linear infinite", "purpose": "Downforce airflow; DRS accelerates duration to 2.4s." },
+      { "name": "wing-transition", "value": "transform .8s var(--ease)", "purpose": "Wing angle responds to the selected aerodynamic mode." },
+      { "name": "marquee", "value": "38s linear infinite", "purpose": "Moving display strip; paused by footer control and disabled for reduced motion." },
+      { "name": "control-transition", "value": "background .25s,border-color .25s", "purpose": "Circular control hover response." },
+      { "name": "gallery-transition", "value": "transform 1s var(--ease),filter 1s var(--ease)", "purpose": "Gentle photo zoom and brightness change." }
+    ],
+    "breakpoints": [
+      { "name": "narrow-phone-max", "value": "370px" },
+      { "name": "mobile-max", "value": "650px" },
+      { "name": "tablet-max", "value": "1000px" },
+      { "name": "wide-min", "value": "1700px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Official Model CTA",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Square filled action with a darker red for small-text contrast.",
+      "html": "<a class=\"ds-primary-link\" href=\"https://www.porsche.com/international/models/911/911-gt3-rs/911-gt3-rs/\" target=\"_blank\" rel=\"noreferrer\">Explore the 911 GT3 RS<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
+      "css": ".ds-primary-link{display:inline-flex;align-items:center;gap:40px;background:#c91c2a;color:var(--white);padding:19px 25px;font-family:Manrope,Arial,sans-serif;font-size:12px;font-weight:600;text-decoration:none;border-radius:0;transition:background .25s}.ds-primary-link:hover{background:#aa1824}.ds-primary-link:focus-visible{outline:2px solid var(--red);outline-offset:6px}"
+    },
+    {
+      "name": "Circular Playback Control",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "Thin outlined utility control used by film and gallery.",
+      "html": "<button class=\"ds-icon-button\" aria-label=\"Play film\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m8 5 11 7-11 7Z\"/></svg></button>",
+      "css": ".ds-icon-button{width:44px;height:44px;display:inline-flex;justify-content:center;align-items:center;background:transparent;color:var(--white);border:1px solid #ffffff50;border-radius:50%;cursor:pointer;transition:background .25s,border-color .25s}.ds-icon-button:hover{background:var(--red);border-color:var(--red)}.ds-icon-button:focus-visible{outline:2px solid var(--red);outline-offset:6px}"
+    },
+    {
+      "name": "Aerodynamic Mode Control",
+      "kind": "custom",
+      "description": "Technical text control with a red pressed-state underline.",
+      "html": "<div class=\"ds-mode-switch\"><button aria-pressed=\"true\">Downforce</button><button aria-pressed=\"false\">Drag reduction</button></div>",
+      "css": ".ds-mode-switch{display:flex;border-bottom:1px solid var(--line);gap:32px}.ds-mode-switch button{background:transparent;color:var(--muted);padding:18px 0;font-family:Manrope,Arial,sans-serif;font-size:12px;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;transition:color .2s,border-color .2s}.ds-mode-switch button[aria-pressed=true]{color:white;border-color:var(--red)}.ds-mode-switch button:hover{color:white}.ds-mode-switch button:focus-visible{outline:2px solid var(--red);outline-offset:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A moving motorsport editorial",
+    "overview": "Silver car photography and film carry the atmosphere. Graphite surfaces, oversized italic lettering, red technical accents, and restrained body copy make the experience feel fast and precise. Large photographic blocks alternate with quieter information and fine dividers.",
+    "keyCharacteristics": [
+      "Graphite and silver-white with purposeful red accents.",
+      "Condensed italic display type paired with compact, clear body text.",
+      "Square photography, thin rules, and outlined circular controls.",
+      "Airflow and wing movement as the signature interaction, with pause and reduced-motion support."
+    ],
+    "rules": [
+      { "name": "The Red Roles Rule", "body": "Keep display red for emphasis and technical states; keep the darker action red for the filled small-text CTA.", "section": "colors" }
+    ],
+    "dos": [
+      "Do lead with the supplied silver/red car imagery and preserve room for the car beneath oversized lettering.",
+      "Do pair italic display type with upright condensed numbers and Manrope body text.",
+      "Do keep square photographic blocks, fine dividers, visible focus, and circular utility controls.",
+      "Do preserve independent film controls, the animation pause action, and reduced-motion alternatives."
+    ],
+    "donts": [
+      "Don't replace the darker filled CTA colors with display red.",
+      "Don't turn the editorial layout into a uniform rounded-card grid.",
+      "Don't introduce ornamental shadows or unrelated accent colors into the graphite/silver/red world.",
+      "Don't remove descriptive captions, accessible control names, or keyboard gallery behavior."
+    ]
+  }
+}

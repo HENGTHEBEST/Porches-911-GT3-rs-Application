@@ -1,0 +1,10 @@
+node_modules
+.vercel
+dist
+test-results
+playwright-report
+.impeccable
+docs
+tests
+.env*
+/Porsche_drifting_on_mountain_road_20261014144513.mp4
